@@ -1,0 +1,11 @@
+---
+# tasks file for down-pods
+- name: "fetch pods status"
+  command: "kubectl scale deployment/{{service}} --replicas=0"
+- name: "fetch pods status"
+  command: "kubectl get pods"
+  register: services_state
+
+- debug:
+    var: services_state
+
