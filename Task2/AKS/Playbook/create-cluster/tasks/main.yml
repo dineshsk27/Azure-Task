@@ -1,0 +1,10 @@
+---
+- name: "fetch pods status"
+  command: "az aks create --resource-group {{resource-group}} --name {{cluster-name}} --node-count {{count}} --enable-addons monitoring --generate-ssh-keys"
+- name: "Check the deployment status"
+  command: "kubectl get pods"
+  register: services_state
+
+- debug:
+    var: services_state
+
