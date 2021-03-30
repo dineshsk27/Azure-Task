@@ -1,0 +1,8 @@
+---
+# vars file for create-cluster
+resource_group: dinesh-task
+location: eastus
+aks_name: dinesh-cluster
+username: azureuser
+ssh_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDedSjOD/PXl3xTbmLV8rYpl7HdK6fvf6gHn1OusCd448Fa00UDy/lXyiQeSUTL75Yf7fWBTqR3T1nP3gf16MsrWlU98VL+IT4tkJlVv5YLvJJ5mVq1S+BExrUAIi9n35flItm6ivsgBCkQSphjZ6NgPyeg1j+UlOR7NpN1eCUIlx25JI6AuH7vB2qCI8/dQxEsLGkXoetnsgNJpPU2zMb/f26AllJViuIkLENZxeGsRWkDCe9jahIwt/IeJbYRxR8cNoSXDdh2N1UYK6XA7NyE4n8QdxlAVANR71e77KGFj96eKzHaBg7QbWiqPzuWH/A7C5603wHTOnkeHqAcI++b root@dinesh"
+aks_version:   1.17.8
