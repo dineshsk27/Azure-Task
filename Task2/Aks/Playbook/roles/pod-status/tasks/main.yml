@@ -1,0 +1,8 @@
+---
+# tasks file for "{{services}}-status"
+- name: "fetch {{services}} status"
+  command: "kubectl get {{services}}"
+  register: services_state
+
+- debug:
+    var: services_state

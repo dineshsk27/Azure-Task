@@ -1,0 +1,19 @@
+---
+# tasks file for deploy-pods
+#
+- name: "fetch pods status"
+  command: "kubectl create -f webserver.yml"
+- name: "Check the deployment status"
+  command: "kubectl get pods"
+  register: services_state
+
+- debug:
+    var: services_state
+- name: "get the services details"
+  command: "kubectl get services"
+  register: deploy_status
+
+- debug:
+    var: deploy_status
+
+

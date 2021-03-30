@@ -1,0 +1,9 @@
+---
+# tasks file for delete-cluster
+- name: "delete a aks cluster"
+  command: "az aks delete --resource-group {{resource}} --name {{cluster}} --yes --no-wait"
+  register: services_state
+
+- debug:
+    var: services_state
+
