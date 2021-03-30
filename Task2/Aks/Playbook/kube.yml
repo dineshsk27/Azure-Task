@@ -1,0 +1,54 @@
+# Stop Vm Using Name
+- name: "Check the pods application status"
+  hosts: localhost
+  connection: local
+  roles:
+     - pod-status
+  tags:
+    - pod-status
+
+- name: "down the pods"
+  hosts: localhost
+  connection: local
+  roles:
+     - down-pods
+  tags:
+    - down-pods
+
+- name: "UP the pods"
+  hosts: localhost
+  connection: local
+  roles:
+     - up-pods
+  tags:
+    - up-pods
+- name: "deploy the pods"
+  hosts: localhost
+  connection: local
+  roles:
+     - deploy-pods
+  tags:
+    - deploy-pods
+
+- name: "Delete deployed the pods"
+  hosts: localhost
+  connection: local
+  roles:
+     - delete-deploy
+  tags:
+    - delete-deploy
+
+- name: "Create a New AKS Cluster"
+  hosts: localhost
+  connection: local
+  roles:
+     - create-cluster
+  tags:
+    - create-cluster
+- name: "Delete a AKS Cluster"
+  hosts: localhost
+  connection: local
+  roles:
+     - delete-cluster
+  tags:
+     - delete-cluster
